@@ -1,28 +1,22 @@
 [build-system]
 requires = [
-    "setuptools>=61.0",
-    "wheel"
+    "hatchling"
 ]
-build-backend = "setuptools.build_meta"
+build-backend = "hatchling.build"
+
 
 [project]
 name = "lourido"
-version = "0.0.1"
-description = ""
-authors = [
-    { name = "Alfonso Sánchez Rodríguez", email = "a.sanchezrodriguez@student.tudelft.nl" }
+dynamic = [
+    "version"
 ]
+license = "MIT"
 requires-python = ">=3.11"
 dependencies = [
     "nastro"
 ]
 
 [project.optional-dependencies]
-dev = [
+test = [
     "pytest"
-]
-
-[tool.setuptools.packages.find]
-where = [
-    "src"
 ]
