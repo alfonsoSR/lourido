@@ -1,0 +1,28 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lourido"
+version = "0.0.1"
+description = ""
+authors = [
+    { name = "Alfonso Sánchez Rodríguez", email = "a.sanchezrodriguez@student.tudelft.nl" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "nastro"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
+
+[tool.setuptools.packages.find]
+where = [
+    "src"
+]
