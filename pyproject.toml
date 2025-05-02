@@ -1,6 +1,7 @@
 [build-system]
 requires = [
-    "hatchling"
+    "hatchling",
+    "hatch-vcs"
 ]
 build-backend = "hatchling.build"
 
@@ -20,3 +21,7 @@ dependencies = [
 test = [
     "pytest"
 ]
+
+[tool.hatch]
+version.source = "vcs"
+build.hooks.vcs.version-file = "src/lourido/_version.py"
